@@ -10,8 +10,6 @@ Add alignment if you wanna
 
 */
 
-
-
 /*
     These are rules are called a 'css reset'
 
@@ -23,23 +21,41 @@ Add alignment if you wanna
     I'm using it here for simplicity.
 */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-
 
 /*
     I've also added this just to visualize the div's we added.
     Feel free to remove it or override it when styling the div's.
 */
-div{
-    border: 1px solid red;
+div {
+  border: 1px solid red;
 
-    /* This is a custom css property (variable) */
-    --spacing :8px;
-    /* This is how you use custom properties*/
-    padding: var(--spacing);
-    margin: var(--spacing);
+  /* This is a custom css property (variable) */
+  --spacing: 8px;
+  /* This is how you use custom properties*/
+  padding: var(--spacing);
+  margin: var(--spacing);
+}
+
+.centered-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#navigation-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#test {
+  align-items: center;
+}
+
+#main-logo {
+  border: 1px solid yellow;
 }
