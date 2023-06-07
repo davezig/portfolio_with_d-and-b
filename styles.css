@@ -11,6 +11,18 @@ Add alignment if you wanna
 */
 
 /*
+
+After layout is done add these properties where required
+
+  margin
+  padding
+  background-color
+  color -- font color
+
+  get rid of div borders
+*/
+
+/*
     These are rules are called a 'css reset'
 
     They reset/remove some of the default styles that
@@ -21,9 +33,9 @@ Add alignment if you wanna
     I'm using it here for simplicity.
 */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 /*
@@ -31,31 +43,33 @@ Add alignment if you wanna
     Feel free to remove it or override it when styling the div's.
 */
 div {
-  border: 1px solid red;
+	border: 1px solid red;
 
-  /* This is a custom css property (variable) */
-  --spacing: 8px;
-  /* This is how you use custom properties*/
-  padding: var(--spacing);
-  margin: var(--spacing);
+	/* This is a custom css property (variable) */
+	--spacing: 8px;
+	/* This is how you use custom properties*/
+	padding: var(--spacing);
+	margin: var(--spacing);
 }
 
 .centered-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.centered-div > img {
+	border: 1px solid blue;
 }
 
 #navigation-buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
-
-#test {
-  align-items: center;
+#navigation-buttons button {
 }
 
 #main-logo {
-  border: 1px solid yellow;
+	border: 1px solid yellow;
 }
